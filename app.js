@@ -23,9 +23,19 @@ app.get('/greeting/:id',  (req, res) =>{
   res.send('Hello! The id was ' + req.params.id)
 })
 
+app.get('/millindar/:id',  (req, res) =>{
+  res.send('Your id: ' + req.params.id)
+})
+
+
 app.get('/yo/:buddy',  (req, res) =>{
   res.send('<h1>Yo, ' + req.params.buddy + '!</h1>')
 })
+
+app.get('/hello/:name',  (req, res) =>{
+  res.send('<h1>hello, ' + req.params.name + '!</h1>')
+})
+
 
 // handle non-existant routes
 app.use((req, res, next) => {
